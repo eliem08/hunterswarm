@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hunterswarm"
+version = "0.1.0"
+description = "Passive recon for bug-bounty hunters: scope in, HackerOne-ready report draft out."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ilyass Emssaad" }]
+
+[project.scripts]
+hunterswarm = "hunterswarm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hunterswarm*"]
